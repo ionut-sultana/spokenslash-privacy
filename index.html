@@ -32,6 +32,17 @@
         margin: 0 auto;
         padding: 3rem 1rem 4rem;
       }
+      nav {
+        display: flex;
+        gap: 1rem;
+        margin: 0 0 2rem;
+        font-size: 0.875rem;
+      }
+      nav a[aria-current="page"] {
+        color: var(--foreground);
+        text-decoration: none;
+        font-weight: 600;
+      }
       h1 {
         font-size: 1.75rem;
         margin: 0 0 0.25rem;
@@ -57,8 +68,13 @@
   </head>
   <body>
     <main>
+      <nav>
+        <a href="./" aria-current="page">Privacy Policy</a>
+        <a href="terms/">Terms of Service</a>
+      </nav>
+
       <h1>SpokenSlash Privacy Policy</h1>
-      <p class="updated">Effective 12 October 2026</p>
+      <p class="updated">Effective 12 October 2026 · updated 16 October 2026</p>
 
       <p>
         SpokenSlash is a personal publishing tool. Its only job is to post the SpokenSlash channel's own short videos
@@ -74,13 +90,25 @@
           <code>pages_read_engagement</code>, <code>pages_manage_posts</code>), used only to upload Reels to that Page
           and to check that each upload finished processing.
         </li>
-        <li>On YouTube and TikTok, the owner's own account, used only to upload the channel's videos.</li>
+        <li>
+          On TikTok, the owner's own account through Login Kit and the Content Posting API
+          (<code>user.info.basic</code>, <code>video.publish</code>). The app reads the account's ID, display name and
+          the posting options TikTok allows it (such as which visibility levels are available), uploads the channel's
+          videos, and checks that each one finished processing.
+        </li>
+        <li>
+          On YouTube, the owner's own channel, used to upload the channel's videos, set their titles, descriptions and
+          thumbnails, and read the channel's own view statistics.
+        </li>
       </ul>
 
       <h2>What the app does not do</h2>
       <ul>
-        <li>It does not collect, store or process personal data about people who view, follow or comment on the Page.</li>
-        <li>It does not read messages, comments or anyone else's profile.</li>
+        <li>
+          It does not collect, store or process personal data about people who view, follow or comment on the
+          channel's videos on any platform.
+        </li>
+        <li>It does not read messages, comments, followers or anyone else's profile.</li>
         <li>It does not sell, rent or share any data, and it shows no ads.</li>
       </ul>
 
@@ -88,15 +116,23 @@
       <p>
         The access tokens that let the app post are stored only on the owner's own computer and are never shared.
         The app keeps a local record of which videos were posted where (video IDs and links), so nothing is posted
-        twice.
+        twice. Nothing is sent to any server other than the platform a video is being posted to.
       </p>
 
       <h2>Deleting data and removing access</h2>
+      <p>You can remove the app's access at any time:</p>
+      <ul>
+        <li>Facebook: Settings &amp; privacy → Settings → Business integrations, then remove SpokenSlash.</li>
+        <li>TikTok: in the TikTok app's Settings and privacy, remove SpokenSlash from the apps connected to the account.</li>
+        <li>
+          YouTube: in your Google Account, open
+          <a href="https://myaccount.google.com/connections">Third-party connections</a> and remove SpokenSlash.
+        </li>
+      </ul>
       <p>
-        You can remove the app's access at any time from Facebook: Settings &amp; privacy → Settings → Business
-        integrations, then remove SpokenSlash. To ask for any record about you to be deleted, email the address
-        below; requests are handled within 30 days. Because the app does not collect data about other people, there
-        is normally nothing to delete.
+        Removing access stops the app from posting and invalidates its stored tokens. To ask for any record about you
+        to be deleted, email the address below; requests are handled within 30 days. Because the app does not collect
+        data about other people, there is normally nothing to delete.
       </p>
 
       <h2>Changes</h2>
