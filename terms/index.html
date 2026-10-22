@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SpokenSlash Terms of Service</title>
+    <link rel="icon" href="/spokenslash-privacy/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" href="/spokenslash-privacy/favicon-32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/spokenslash-privacy/icon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/spokenslash-privacy/apple-touch-icon.png" />
     <style>
       :root {
         --background: #fafaf9;
@@ -64,10 +68,29 @@
       a {
         color: var(--primary);
       }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 0 0 1.5rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--foreground);
+        text-decoration: none;
+      }
+      .brand img {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+      }
     </style>
   </head>
   <body>
     <main>
+      <a class="brand" href="/spokenslash-privacy/">
+        <img src="/spokenslash-privacy/icon.png" alt="SpokenSlash app icon" width="48" height="48" />
+        SpokenSlash
+      </a>
       <nav>
         <a href="../">Privacy Policy</a>
         <a href="./" aria-current="page">Terms of Service</a>
